@@ -4,14 +4,14 @@ A single-page portfolio site showcasing content design work, including case stud
 Great Learning's Pro+ subscription, payment failure recovery flows, programme page
 iteration, and an AI-assisted content design system.
 
-**Live site:** _(added after the first Vercel deploy)_
+**Live site:** https://cheydesign.github.io/chethnacontentportfolio/
 
 ## Structure
 
 ```
 index.html      the entire site — markup, styles and scripts in one file
 images/         case study screenshots (WebP)
-vercel.json     static hosting + cache headers
+.nojekyll       tells GitHub Pages to serve the files as-is
 ```
 
 There is no build step and no dependencies. The site is plain HTML, CSS and vanilla
@@ -29,8 +29,12 @@ python3 -m http.server 8000
 
 ## Deploying
 
-Vercel is connected to this repository. Any push to `main` deploys automatically —
-pushes to other branches produce preview URLs.
+Hosted on GitHub Pages from the `main` branch, root folder. Any push to `main`
+republishes the site automatically — the Pages build runs as a GitHub Action and
+usually finishes within a minute.
+
+All asset paths are relative, so the site works correctly when served from a
+subpath such as `/chethnacontentportfolio/`.
 
 ## Notes on the images
 
